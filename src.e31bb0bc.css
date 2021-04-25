@@ -1,0 +1,277 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background: black;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem;
+}
+.header img {
+  width: 15%;
+  border-radius: 10px;
+}
+.header p {
+  font-size: 1.3rem;
+  color: white;
+}
+
+.imageHolder {
+  display: grid;
+  margin: 1rem;
+  gap: 1em;
+  z-index: -1;
+  grid-template-columns: repeat(4, 1fr);
+}
+.imageHolder img {
+  z-index: -1;
+  width: 100%;
+  height: 13rem;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.Score {
+  color: white;
+}
+.Score span {
+  padding: 1rem;
+}
+
+.gameover {
+  background: url("https://wallpapercave.com/wp/wp3999950.jpg") center;
+  background-position: center;
+  background-size: cover;
+  width: 60vw;
+  height: 45vh;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  border: 5px solid #e3e3e333;
+  z-index: 1;
+}
+.gameover :before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 20px;
+  border: 5px solid #e3e3e333;
+  background: rgba(0, 0, 0, 0.3);
+}
+.gameover p {
+  font-size: 2rem;
+  color: #1380df;
+}
+.gameover button {
+  cursor: pointer;
+  background: transparent;
+  color: white;
+  border: 2px solid green;
+  padding: 0.5rem 0.75rem;
+  margin-top: 1rem;
+}
+
+.img {
+  background: rgba(255, 255, 255, 0.037);
+  border-radius: 20px;
+  border: 7px solid rgba(255, 255, 255, 0.886);
+}
+
+.box {
+  background-color: #9d5b75;
+  transition: opacity 2000ms;
+  will-change: opacity;
+}
+
+.box.faded-out {
+  opacity: 0;
+}
+
+@media screen and (max-width: 525px) {
+  .imageHolder {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .imageHolder img {
+    z-index: -1;
+    width: 100%;
+    height: 9rem;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
+  .header {
+    text-align: center;
+  }
+  .header p {
+    font-size: 1rem;
+  }
+  .header img {
+    width: 45%;
+    border-radius: 10px;
+  }
+
+  .score span {
+    font-size: 1rem;
+  }
+
+  .gameover {
+    width: 85%;
+  }
+  .gameover p {
+    font-size: 1.4rem;
+  }
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/*# sourceMappingURL=/src.e31bb0bc.css.map */
