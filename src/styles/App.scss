@@ -1,0 +1,146 @@
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  background: black;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem;
+  img {
+    width: 15%;
+    border-radius: 10px;
+  }
+  p {
+    font-size: 1.3rem;
+    color: white;
+  }
+}
+
+.imageHolder {
+  display: grid;
+  margin: 1rem;
+  gap: 1em;
+  z-index: -1;
+  grid-template-columns: repeat(4, 1fr);
+  img {
+    z-index: -1;
+    width: 100%;
+    height: 13rem;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+}
+.Score {
+  color: white;
+  span {
+    padding: 1rem;
+  }
+}
+
+.gameover {
+  background: url("https://wallpapercave.com/wp/wp3999950.jpg") center;
+  background-position: center;
+  background-size: cover;
+  width: 60vw;
+  height: 45vh;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  border: 5px solid #e3e3e333;
+  z-index: 1;
+  :before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 20px;
+    border: 5px solid #e3e3e333;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  p {
+    font-size: 2rem;
+    color: rgb(19, 128, 223);
+  }
+  button {
+    cursor: pointer;
+    background: transparent;
+    color: white;
+    border: 2px solid green;
+    padding: 0.5rem 0.75rem;
+    margin-top: 1rem;
+  }
+}
+.img {
+  background: rgba(255, 255, 255, 0.037);
+  border-radius: 20px;
+  border: 7px solid rgba(255, 255, 255, 0.886);
+}
+
+// the classes for transition
+.box {
+  background-color: #9d5b75;
+  transition: opacity 2000ms;
+  will-change: opacity;
+}
+
+.box.faded-out {
+  opacity: 0;
+}
+
+@media screen and (max-width: 525px) {
+  .imageHolder {
+    grid-template-columns: repeat(2, 1fr);
+    img {
+      z-index: -1;
+      width: 100%;
+      height: 9rem;
+      border-radius: 20px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+  }
+  .header {
+    text-align: center;
+    p {
+      font-size: 1rem;
+    }
+    img {
+      width: 45%;
+      border-radius: 10px;
+    }
+  }
+  .score {
+    span {
+      font-size: 1rem;
+    }
+  }
+  .gameover {
+    width: 85%;
+    p {
+      font-size: 1.4rem;
+    }
+  }
+}
